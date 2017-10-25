@@ -1,0 +1,17 @@
+.clearfix::after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ' ';
+  clear: both;
+  height: 0;
+}
+html {
+  background: #ededed;
+}
+body {
+  font-family: PingFang SC, Helvetica Neue, Helvetica, Arial, Hiragino Sans GB,
+    Microsoft Yahei, sans-serif;
+  color: #666;
+  font-size: 14px;
+}
