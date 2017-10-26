@@ -1,6 +1,7 @@
 import home from '../components/home/home'
 import login from '../components/login/login'
 import account from '../components/account/account'
+import item from '../components/item/item'
 
 const routes = [
     {
@@ -20,6 +21,11 @@ const routes = [
             requireAuth: true
         },
         component: account
+    },
+    {
+        path: '/item',
+        name: 'item',
+        component: item
     }
 ]
 

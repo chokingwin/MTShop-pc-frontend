@@ -15,3 +15,7 @@ body {
   color: #666;
   font-size: 14px;
 }
+
+input {
+  outline: none;
+}
