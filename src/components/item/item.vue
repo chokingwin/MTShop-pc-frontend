@@ -192,7 +192,7 @@
 import header from '../header/header';
 import headerSubShop from '../header-sub-shop/header-sub-shop';
 import footer from '../footer/footer';
-import loading from '../loading/loading';
+import loading from '../loading/page-loading';
 
 export default {
   name: 'item',
