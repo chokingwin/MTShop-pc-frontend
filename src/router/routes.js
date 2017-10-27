@@ -3,6 +3,7 @@ import login from '../components/login/login';
 import register from '../components/register/register';
 import account from '../components/account/account';
 import information from '../components/information/information';
+import address from '../components/address/address';
 import item from '../components/item/item';
 
 const routes = [
@@ -36,6 +37,14 @@ const routes = [
           requireAuth: true
         },
         component: information
+      },
+      {
+        path: 'address/list',
+        name: 'address',
+        meta: {
+          requireAuth: true
+        },
+        component: address
       }
     ]
   },
