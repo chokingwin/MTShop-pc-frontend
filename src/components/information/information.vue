@@ -70,7 +70,7 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .gray-box
   overflow hidden
   border 1px solid #D1D1D1

@@ -64,7 +64,7 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .fn-left, .fn-right
     display inline
 
