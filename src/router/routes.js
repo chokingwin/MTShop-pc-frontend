@@ -6,6 +6,7 @@ import order from '../components/order/order';
 import information from '../components/information/information';
 import address from '../components/address/address';
 import item from '../components/item/item';
+import checkout from '../components/checkout/checkout';
 
 const routes = [
   {
@@ -61,6 +62,14 @@ const routes = [
     path: '/item',
     name: 'item',
     component: item
+  },
+  {
+    path: '/checkout',
+    name: 'checkout',
+    meta: {
+      requireAuth: true
+    },
+    component: checkout
   }
 ];
 
