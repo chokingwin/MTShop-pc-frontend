@@ -7,6 +7,7 @@ import information from '../components/information/information';
 import address from '../components/address/address';
 import item from '../components/item/item';
 import checkout from '../components/checkout/checkout';
+import error404 from '../components/error/404';
 
 const routes = [
   {
@@ -70,6 +71,11 @@ const routes = [
       requireAuth: true
     },
     component: checkout
+  },
+  {
+    path: '*',
+    name: 'error404',
+    component: error404
   }
 ];
 
