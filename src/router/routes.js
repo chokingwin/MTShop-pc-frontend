@@ -3,6 +3,7 @@ import login from '../components/login/login';
 import register from '../components/register/register';
 import account from '../components/account/account';
 import order from '../components/order/order';
+import payment from '../components/payment/payment';
 import information from '../components/information/information';
 import address from '../components/address/address';
 import item from '../components/item/item';
@@ -71,6 +72,14 @@ const routes = [
       requireAuth: true
     },
     component: checkout
+  },
+  {
+    path: '/order/payment',
+    name: 'payment',
+    meta: {
+      requireAuth: true
+    },
+    component: payment
   },
   {
     path: '*',
