@@ -1,5 +1,6 @@
 import home from '../components/home/home';
 import category from '../components/category/category';
+import cart from '../components/cart/cart';
 import login from '../components/login/login';
 import register from '../components/register/register';
 import account from '../components/account/account';
@@ -22,6 +23,11 @@ const routes = [
     path: '/category',
     name: 'category',
     component: category
+  },
+  {
+    path: '/cart',
+    name: 'cart',
+    component: cart
   },
   {
     path: '/login',
