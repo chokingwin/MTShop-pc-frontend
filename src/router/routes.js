@@ -3,11 +3,12 @@ import login from '../components/login/login';
 import register from '../components/register/register';
 import account from '../components/account/account';
 import order from '../components/order/order';
-import payment from '../components/payment/payment';
+import orderDetail from '../components/order/detail';
 import information from '../components/information/information';
 import address from '../components/address/address';
 import item from '../components/item/item';
 import checkout from '../components/checkout/checkout';
+import payment from '../components/payment/payment';
 import error404 from '../components/error/404';
 
 const routes = [
@@ -41,6 +42,14 @@ const routes = [
           requireAuth: true
         },
         component: order
+      },
+      {
+        path: 'order/detail',
+        name: 'orderDetail',
+        meta: {
+          requireAuth: true
+        },
+        component: orderDetail
       },
       {
         path: 'information',

@@ -35,6 +35,9 @@ export default {
   mounted() {
     flag = setInterval(this.curNum, 1000);
   },
+  destroyed () {
+    clearInterval(flag);
+  },
   data() {
     return {
       num: 10
