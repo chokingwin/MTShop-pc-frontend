@@ -1,4 +1,5 @@
 import home from '../components/home/home';
+import category from '../components/category/category';
 import login from '../components/login/login';
 import register from '../components/register/register';
 import account from '../components/account/account';
@@ -16,6 +17,11 @@ const routes = [
     path: '/',
     name: 'home',
     component: home
+  },
+  {
+    path: '/category',
+    name: 'category',
+    component: category
   },
   {
     path: '/login',

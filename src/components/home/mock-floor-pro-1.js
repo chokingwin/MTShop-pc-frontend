@@ -2,7 +2,7 @@ let floorPro1 = [
   {
     pic:
       'http://image.smartisanos.cn/resource/78838beff1b5b0a1bd5e68c22302ca1c.png?x-oss-process=image/resize,w_610/quality,Q_100/format,webp',
-    link: '../shop/#/jianguopro'
+    link: '/#/jianguopro'
   },
   {
     name: '坚果 Pro 软胶保护套',
@@ -23,10 +23,10 @@ let floorPro1 = [
       'http://img01.smartisanos.cn/attr/v2/1000271/52317E0C067C97FC6CE9376A2432CFFF/20X20.jpg'
     ],
     link: [
-      '../shop/#/item/100027101',
-      '../shop/#/item/100027102',
-      '../shop/#/item/100027103',
-      '../shop/#/item/100027104'
+      '/#/item/100027101',
+      '/#/item/100027102',
+      '/#/item/100027103',
+      '/#/item/100027104'
     ],
     is_sold_out: false,
     cur_index: 0
@@ -43,7 +43,7 @@ let floorPro1 = [
     color_pics: [
       'http://img01.smartisanos.cn/attr/v2/1000299/B37F37544921114CEF1EC01ED4DF44E4/20X20.jpg'
     ],
-    link: ['../shop/#/item/100029901'],
+    link: ['/#/item/100029901'],
     is_sold_out: false,
     cur_index: 0
   },
@@ -59,7 +59,7 @@ let floorPro1 = [
     color_pics: [
       'http://img01.smartisanos.cn/attr/v2/1000267/E647E77234F9ED0FDE9DD4084D35FF57/20X20.jpg'
     ],
-    link: ['../shop/#/item/100026701'],
+    link: ['/#/item/100026701'],
     is_sold_out: false,
     cur_index: 0
   },
@@ -75,7 +75,7 @@ let floorPro1 = [
     color_pics: [
       'http://img01.smartisanos.cn/attr/v2/1000266/E647E77234F9ED0FDE9DD4084D35FF57/20X20.jpg'
     ],
-    link: ['../shop/#/item/100026601'],
+    link: ['/#/item/100026601'],
     is_sold_out: false,
     cur_index: 0
   },
@@ -91,7 +91,7 @@ let floorPro1 = [
     color_pics: [
       'http://img01.smartisanos.cn/attr/v2/1000228/E647E77234F9ED0FDE9DD4084D35FF57/20X20.jpg'
     ],
-    link: ['../shop/#/item/100022801'],
+    link: ['/#/item/100022801'],
     is_sold_out: false,
     cur_index: 0
   },
@@ -112,9 +112,9 @@ let floorPro1 = [
       'http://img01.smartisanos.cn/attr/v2/1000239/6A30AF98B0B61D85F25BC61EA1EB4F65/20X20.jpg'
     ],
     link: [
-      '../shop/#/item/100023901',
-      '../shop/#/item/100023902',
-      '../shop/#/item/100023903'
+      '/#/item/100023901',
+      '/#/item/100023902',
+      '/#/item/100023903'
     ],
     is_sold_out: false,
     cur_index: 0

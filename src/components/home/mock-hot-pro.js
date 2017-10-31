@@ -16,9 +16,9 @@ let hotPro = [
       'http://img01.smartisanos.cn/attr/v2/1000339/C7AB93C2D0B8D95951186FDCB809894E/20X20.jpg'
     ],
     link: [
-      '../shop/#/item/100033911',
-      '../shop/#/item/100033912',
-      '../shop/#/item/100033913'
+      '/#/item/100033911',
+      '/#/item/100033912',
+      '/#/item/100033913'
     ],
     is_sold_out: true,
     cur_index: 0
@@ -35,7 +35,7 @@ let hotPro = [
     color_pics: [
       'http://img01.smartisanos.cn/attr/v2/1000339/DAAB83312CD86EA464FDC1CB447B37C4/20X20.jpg'
     ],
-    link: ['../shop/#/item/100032701'],
+    link: ['/#/item/100032701'],
     is_sold_out: false,
     cur_index: 0
   },
@@ -51,7 +51,7 @@ let hotPro = [
     color_pics: [
       'http://img01.smartisanos.cn/attr/v2/1000274/3555AF9D0704A3AE3ECB7DC7C6866775/20X20.jpg'
     ],
-    link: ['../shop/#/item/100027401'],
+    link: ['/#/item/100027401'],
     is_sold_out: false,
     cur_index: 0
   },
@@ -69,7 +69,7 @@ let hotPro = [
       'http://img01.smartisanos.cn/attr/v2/1000223/16BBDBE3D35C0C4EF56427CBBDD7C4B1/20X20.jpg',
       'http://img01.smartisanos.cn/attr/v2/1000223/8E5E24A93E7DA19262F09A33A69DEC8E/20X20.jpg'
     ],
-    link: ['../shop/#/item/100022301', '../shop/#/item/100022302'],
+    link: ['/#/item/100022301', '/#/item/100022302'],
     is_sold_out: false,
     cur_index: 0
   }

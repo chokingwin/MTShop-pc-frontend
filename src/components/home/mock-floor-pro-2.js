@@ -2,7 +2,7 @@ let floorPro2 = [
   {
     pic:
       'http://image.smartisanos.cn/resource/098e60d23f424f8ed2fad2cb05ff53b6.jpg?x-oss-process=image/resize,w_610/quality,Q_100/format,webp',
-    link: '../shop/#/item/1000231'
+    link: '/#/item/1000231'
   },
   {
     name: 'FIIL CARAT LITE 蓝牙运动耳机',
@@ -16,7 +16,7 @@ let floorPro2 = [
     color_pics: [
       'http://img01.smartisanos.cn/attr/v2/1000325/DDDD334EE9E667503425B40CC9C0320B/20X20.jpg'
     ],
-    link: ['../shop/#/item/100032501'],
+    link: ['/#/item/100032501'],
     is_sold_out: false,
     cur_index: 0
   },
@@ -30,7 +30,7 @@ let floorPro2 = [
       'http://image.smartisanos.cn/resource/5e4e40120d09fb6791f9430f914c6f68.jpg?x-oss-process=image/resize,w_206/quality,Q_90/format,webp'
     ],
     color_pics: null,
-    link: ['../shop/#/item/100022201'],
+    link: ['/#/item/100022201'],
     is_sold_out: false,
     cur_index: 0
   },
@@ -48,7 +48,7 @@ let floorPro2 = [
       'http://img01.smartisanos.cn/attr/v2/1000324/DDDD334EE9E667503425B40CC9C0320B/20X20.jpg',
       'http://img01.smartisanos.cn/attr/v2/1000324/7E1DEEE5A7D2005BE103EFB304EAF78C/20X20.jpg'
     ],
-    link: ['../shop/#/item/100032201'],
+    link: ['/#/item/100032201'],
     is_sold_out: false,
     cur_index: 0
   },
@@ -62,7 +62,7 @@ let floorPro2 = [
       'http://image.smartisanos.cn/resource/f950d9c27ef21e17374fa212b40d66a9.jpg?x-oss-process=image/resize,w_206/quality,Q_90/format,webp'
     ],
     color_pics: null,
-    link: ['../shop/#/item/100032201'],
+    link: ['/#/item/100032201'],
     is_sold_out: false,
     cur_index: 0
   },
@@ -78,7 +78,7 @@ let floorPro2 = [
     color_pics: [
       'http://img01.smartisanos.cn/attr/v2/1000339/DAAB83312CD86EA464FDC1CB447B37C4/20X20.jpg'
     ],
-    link: ['../shop/#/item/100032701'],
+    link: ['/#/item/100032701'],
     is_sold_out: false,
     cur_index: 0
   },
@@ -97,8 +97,8 @@ let floorPro2 = [
       'http://img01.smartisanos.cn/attr/v2/1000231/9819026F00AB1751CB091F2481F4413B/20X20.jpg'
     ],
     link: [
-      '../shop/#/item/100023101',
-      '../shop/#/item/100023102'
+      '/#/item/100023101',
+      '/#/item/100023102'
     ],
     is_sold_out: false,
     cur_index: 0
