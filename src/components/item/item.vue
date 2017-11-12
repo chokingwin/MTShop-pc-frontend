@@ -213,12 +213,29 @@ export default {
     };
   },
   mounted() {
+    let productCategoryId = this.$route.params.productCategoryId;
+    let productId = this.$route.query.productId;
+    console.log(productCategoryId);
+    console.log(productId);
+    this._loadData(productId);
     window.addEventListener('scroll', this.handleScroll);
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
+    _loadData(id) {
+      let vm = this;
+      let params = {
+        url: 'product/' + id,
+        type: 'get',
+        sCallback(data) {
+          vm.data = data;
+        },
+        eCallback(e) {}
+      };
+      this.http.request(params);
+    },
     handleScroll() {
       let scrollTop =
         window.pageYOffset ||

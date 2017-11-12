@@ -11,7 +11,6 @@ axios.interceptors.request.use(
     config => {
         if (store.state.token) {
             config.headers.token = store.state.token;
-            config.headers.contentType = 'application/json';
         }
         return config;
     },

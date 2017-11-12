@@ -82,7 +82,7 @@ const routes = [
     ]
   },
   {
-    path: '/item',
+    path: '/item/:productCategoryId',
     name: 'item',
     component: item
   },
