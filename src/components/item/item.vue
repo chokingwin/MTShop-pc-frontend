@@ -10,26 +10,15 @@
                         <div class="gallery">
                             <div class="thumbnail">
                                 <ul>
-                                    <li @click="activeThumbnail" class="on">
-                                        <img src="http://image.smartisanos.cn/resource/3859ea627faeb07b34b55c1ce736012b.png?x-oss-process=image/resize,w_54/quality,Q_90/format,webp">
-                                    </li>
-                                    <li @click="activeThumbnail">
-                                        <img src="http://image.smartisanos.cn/resource/3e436871bd837b7789b7288a9a0bd10f.png?x-oss-process=image/resize,w_54/quality,Q_90/format,webp">
-                                    </li>
-                                    <li @click="activeThumbnail">
-                                        <img src="http://image.smartisanos.cn/resource/33700b04fb18a9b668e4b6fa61099d71.png?x-oss-process=image/resize,w_54/quality,Q_90/format,webp">
-                                    </li>
-                                    <li @click="activeThumbnail">
-                                        <img src="http://image.smartisanos.cn/resource/22da1d44e913c9f9b4b4c3425686812a.png?x-oss-process=image/resize,w_54/quality,Q_90/format,webp">
-                                    </li>
-                                    <li @click="activeThumbnail">
-                                        <img src="http://image.smartisanos.cn/resource/b5e5a357c210670bec0df31c23c4a1b1.png?x-oss-process=image/resize,w_54/quality,Q_90/format,webp">
+                                    <li @click="activeThumbnail" class="on" v-for="(item,index) in data.img" :key="index">
+                                        <img :src="item.img.url">
                                     </li>
                                 </ul>
                             </div>
                             <div class="thumb">
                                 <ul>
-                                    <li class="on"><img src="http://image.smartisanos.cn/resource/3859ea627faeb07b34b55c1ce736012b.png?x-oss-process=image/resize,w_440/quality,Q_90/format,webp"></li>
+                                    <!-- <li class="on"><img src="https://resource.smartisan.com/resource/03672f1e13115b2c6f67b2581d7ba348.png?x-oss-process=image/resize,w_54/quality,Q_90/format,webp"></li> -->
+                                    <li class="on"><img src="http://image.smartisanos.cn/resource/3e436871bd837b7789b7288a9a0bd10f.png?x-oss-process=image/resize,w_440/quality,Q_90/format,webp"></li>
                                     <li class=""><img src="http://image.smartisanos.cn/resource/3e436871bd837b7789b7288a9a0bd10f.png?x-oss-process=image/resize,w_440/quality,Q_90/format,webp"></li>
                                     <li class=""><img src="http://image.smartisanos.cn/resource/33700b04fb18a9b668e4b6fa61099d71.png?x-oss-process=image/resize,w_440/quality,Q_90/format,webp"></li>
                                     <li class=""><img src="http://image.smartisanos.cn/resource/22da1d44e913c9f9b4b4c3425686812a.png?x-oss-process=image/resize,w_440/quality,Q_90/format,webp"></li>
@@ -43,76 +32,19 @@
                             <div class="params-price">
                                 <span>
                                     <em>¥</em>
-                                    <i>249.00</i>
+                                    <i>{{data.price}}</i>
                                 </span>
                             </div>
                             <div class="params-info">
-                                <h4>Smartisan 卫衣 大爆炸</h4>
-                                <h6>风格简洁、舒适服帖</h6>
+                                <h4>{{data.name}}</h4>
+                                <h6>{{data.summary}}</h6>
                             </div>
                         </div>
                         <div class="sku-dynamic-params-panel">
-                            <div class="sku-dynamic-params clearfix">
-                                <span class="params-name">颜色</span>
-                                <ul class="params-colors">
-                                    <li class="true" @click="chooseParams">
-                                        <a title="黑色">
-                                            <i><img src="http://img01.smartisanos.cn/attr/v2/1000339/DDDD334EE9E667503425B40CC9C0320B/20X20.jpg"></i>
-                                        </a>
-                                    </li>
-                                    <li class="cur" @click="chooseParams">
-                                        <a title="花灰色">
-                                            <i><img src="http://img01.smartisanos.cn/attr/v2/1000339/DAAB83312CD86EA464FDC1CB447B37C4/20X20.jpg"></i>
-                                        </a>
-                                    </li>
-                                    <li class="true" @click="chooseParams">
-                                        <a title="藏蓝色">
-                                            <i><img src="http://img01.smartisanos.cn/attr/v2/1000339/C7AB93C2D0B8D95951186FDCB809894E/20X20.jpg"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="sku-dynamic-params clearfix">
-                                <span class="params-name">尺码</span>
-                                <ul class="params-normal">
-                                    <li class="cur params-text" @click="chooseParams">
-                                        <a title="S">
-                                            <span>S</span>
-                                        </a>
-                                    </li>
-                                    <li class="true params-text" @click="chooseParams">
-                                        <a title="M">
-                                            <span>M</span>
-                                        </a>
-                                    </li>
-                                    <li class="true params-text" @click="chooseParams">
-                                        <a title="L">
-                                            <span>L</span>
-                                        </a>
-                                    </li>
-                                    <li class="true params-text" @click="chooseParams">
-                                        <a title="XL">
-                                            <span>XL</span>
-                                        </a>
-                                    </li>
-                                    <li class="true params-text" @click="chooseParams">
-                                        <a title="XXL">
-                                            <span>XXL</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="sku-dynamic-params clearfix">
-                                <div class="params-name">数量</div>
-                                <div class="params-detail clearfix">
-                                    <div class="item-num">
-                                        <span class="down down-disabled" @click="downNum">-</span>
-                                        <span class="num">
-                                            <input type="text" v-model.number="curNum">
-                                        </span>
-                                        <span class="up" @click="upNum">+</span>
-                                    </div>
-                                </div>
+                            <div class="sku-dynamic-params clearfix" v-for="(item,index) in data.product_category.spec" :key="index">
+                                <circle-single-select v-if="item.type==='circle'" :p_num="data.p_num" :spec="item" @changeParams="receiveParamsChange"></circle-single-select>
+                                <rectangle-single-select v-if="item.type==='rectangle'" :p_num="data.p_num" :spec="item" @changeParams="receiveParamsChange"></rectangle-single-select>
+                                <up-down-num v-if="item.type==='num'" :p_num="data.p_num" :spec="item" @changeParams="receiveParamsChange"></up-down-num>
                             </div>
                         </div>
                         <div class="sku-status">
@@ -145,16 +77,7 @@
                         <h2>产品信息</h2>
                     </div>
                     <div class="item-info">
-                        <img src="http://image.smartisanos.cn/resource/ec6dafed3c75ab3d65c062bc4a28624a.png?x-oss-process=image/resize,w_1220/indexcrop,y_1440,i_0/quality,Q_100/format,webp">
-                        <img src="http://image.smartisanos.cn/resource/ec6dafed3c75ab3d65c062bc4a28624a.png?x-oss-process=image/resize,w_1220/indexcrop,y_1440,i_1/quality,Q_100/format,webp">
-                        <img src="http://image.smartisanos.cn/resource/ec6dafed3c75ab3d65c062bc4a28624a.png?x-oss-process=image/resize,w_1220/indexcrop,y_1440,i_2/quality,Q_100/format,webp">
-                        <img src="http://image.smartisanos.cn/resource/ec6dafed3c75ab3d65c062bc4a28624a.png?x-oss-process=image/resize,w_1220/indexcrop,y_1440,i_3/quality,Q_100/format,webp">
-                        <img src="http://image.smartisanos.cn/resource/ec6dafed3c75ab3d65c062bc4a28624a.png?x-oss-process=image/resize,w_1220/indexcrop,y_1440,i_4/quality,Q_100/format,webp">
-                        <img src="http://image.smartisanos.cn/resource/ec6dafed3c75ab3d65c062bc4a28624a.png?x-oss-process=image/resize,w_1220/indexcrop,y_1440,i_5/quality,Q_100/format,webp">
-                        <img src="http://image.smartisanos.cn/resource/ec6dafed3c75ab3d65c062bc4a28624a.png?x-oss-process=image/resize,w_1220/indexcrop,y_1440,i_6/quality,Q_100/format,webp">
-                        <img src="http://image.smartisanos.cn/resource/ec6dafed3c75ab3d65c062bc4a28624a.png?x-oss-process=image/resize,w_1220/indexcrop,y_1440,i_7/quality,Q_100/format,webp">
-                        <img src="http://image.smartisanos.cn/resource/ec6dafed3c75ab3d65c062bc4a28624a.png?x-oss-process=image/resize,w_1220/indexcrop,y_1440,i_8/quality,Q_100/format,webp">
-                        <img src="http://image.smartisanos.cn/resource/ec6dafed3c75ab3d65c062bc4a28624a.png?x-oss-process=image/resize,w_1220/indexcrop,y_1440,i_9/quality,Q_100/format,webp">
+                        <img :src="item.img.url" :key="index" v-for="(item,index) in data.product_category.img">
                     </div>
                 </div>
                 <div class="fixed-nav" :class="{active:showparamsFixedNav}">
@@ -193,6 +116,9 @@ import header from '../header/header';
 import headerSubShop from '../header-sub-shop/header-sub-shop';
 import footer from '../footer/footer';
 import loading from '../loading/page-loading';
+import circleSingleSelect from './circle-single-select';
+import rectangleSingleSelect from './rectangle-single-select';
+import upDownNum from './up-down-num';
 
 export default {
   name: 'item',
@@ -200,22 +126,24 @@ export default {
     'm-header': header,
     'header-sub-shop': headerSubShop,
     'm-footer': footer,
-    loading: loading
+    loading: loading,
+    'circle-single-select': circleSingleSelect,
+    'rectangle-single-select': rectangleSingleSelect,
+    'up-down-num': upDownNum
   },
   data() {
     return {
       pageLoading: false,
       curNum: 1,
-      data: {
-        maxNum: 10
-      },
-      showparamsFixedNav: false
+      data: {},
+      showparamsFixedNav: false,
+      productCategoryId: null
     };
   },
   mounted() {
-    let productCategoryId = this.$route.params.productCategoryId;
+    this.productCategoryId = this.$route.params.productCategoryId;
     let productId = this.$route.query.productId;
-    console.log(productCategoryId);
+    console.log(this.productCategoryId);
     console.log(productId);
     this._loadData(productId);
     window.addEventListener('scroll', this.handleScroll);
@@ -251,19 +179,21 @@ export default {
       }
     },
     activeThumbnail() {},
-    chooseParams() {},
-    downNum() {
-      if (this.curNum === 1) return;
-      this.curNum = this.curNum - 1;
-      this.data.curNum = this.curNum;
-    },
-    upNum() {
-      if (this.curNum >= this.data.maxNum) return;
-      this.curNum = this.curNum + 1;
-      this.data.curNum = this.curNum;
+    receiveParamsChange(data) {
+      let vm = this;
+      console.log(data);
+      if (data.spec_id === '1') {
+        vm.$router.push({
+          path: '/item/' + vm.productCategoryId + '?productId=' + data.value
+        });
+      }
     },
     addCart() {},
-    goToCheckout() {},
+    goToCheckout() {
+      this.$router.push({
+        path: '/checkout'
+      });
+    },
     hideCartTipDiag() {},
     jumpToCart() {}
   }
