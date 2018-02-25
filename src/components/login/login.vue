@@ -13,8 +13,8 @@
                                     <span class="icon">
                                         <i>手机号/邮箱</i>
                                     </span>
-                                    <span class="placeholder">手机号/邮箱</span>
-                                    <input type="text" name="username" autocomplete="username">
+                                    <!-- <span class="placeholder">手机号/邮箱</span> -->
+                                    <input type="text" name="username" autocomplete="username" v-model="username">
                                     <span class="warning">请输入手机号/邮箱</span>
                                     <span class="warning">手机号/邮箱格式错误</span>
                                     <span class="warning">手机号/邮箱不存在</span>
@@ -25,8 +25,8 @@
                                     <span class="icon">
                                         <i>密码</i>
                                     </span>
-                                    <span class="placeholder">密码</span>
-                                    <input type="password" name="password" autocomplete="current-password">
+                                    <!-- <span class="placeholder">密码</span> -->
+                                    <input type="password" name="password" autocomplete="current-password" v-model="password">
                                     <span class="m-eye"></span>
                                     <span class="warning">请输入密码</span>
                                     <span class="warning">密码错误</span>
@@ -41,7 +41,7 @@
                                 <a class="registercloud" @click="toRegister">注册 Smartisan ID</a>
                             </li>
                         </ul>
-                        <div class="btn-wrapper">
+                        <div class="btn-wrapper" @click="postData">
                             <div class="btn btn-primary disabled">
                                 <a>登录</a>
                             </div>
@@ -75,6 +75,7 @@
 <script type="text/ecmascript-6">
 import loading from '../loading/loading';
 import copyright from '../copyright/copyright';
+import * as types from '../../store/mutation-types';
 
 export default {
   name: 'login',
@@ -85,7 +86,9 @@ export default {
   data() {
     return {
       isLoading: false,
-      remembered: true
+      remembered: true,
+      username: '',
+      password: ''
     };
   },
   methods: {
@@ -94,6 +97,32 @@ export default {
       this.$router.push({
         path: '/register'
       });
+    },
+    postData() {
+      let vm = this;
+      let params = {
+        url: 'token/user',
+        type: 'post',
+        params: {
+          username: vm.username,
+          password: vm.password
+        },
+        sCallback(data) {
+          if (data.errorCode === 0) {
+            vm.$store.commit(types.LOGIN, data.data);
+            let redirect = decodeURIComponent(
+              vm.$route.query.redirect || '/account/information'
+            );
+            vm.$router.push({
+              path: redirect
+            });
+          } else {
+            console.log('帐号或密码错误!');
+          }
+        },
+        eCallback(e) {}
+      };
+      this.http.request(params);
     }
   }
 };
@@ -194,7 +223,7 @@ export default {
         left 50%
         margin-left -225px
         position absolute
-        background: url(./dialog-gray-bg.png) #fff bottom repeat-x;
+        background url('./dialog-gray-bg.png') #fff bottom repeat-x
 
         .title
             position relative
